@@ -1,3 +1,8 @@
+import csv
+
+file = open('pm2.5 data', 'w', newline = None)
+csvwriter = csv.writer(file, delimiter=',')
+
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
@@ -78,3 +83,6 @@ while True:
     print("Particles > 5.0um / 0.1L air:", aqdata["particles 50um"])
     print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
     print("---------------------------------------")
+    csvwriter.writerow([aqdata["pm25 standard"]])
+    
+file.close()
