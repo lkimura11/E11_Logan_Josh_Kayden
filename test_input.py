@@ -14,6 +14,7 @@ else:
 count=0
 while count < run_time:
   count += 1
+  print("Taking data entry:", count)
   time.sleep(1)
 
 file = open('pm2.5_and_weather_data', 'w', newline = None)
