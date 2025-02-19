@@ -21,6 +21,7 @@ else:
 
 file = open('pm2.5_and_weather_data', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
+csvwriter.writerow(["
 
 count=1
 while count < run_time:
@@ -90,7 +91,7 @@ while count < run_time:
   print("Humidity: %0.1f %%" % bme680.relative_humidity)
   print("Pressure: %0.3f hPa" % bme680.pressure)
   print("Altitude = %0.2f meters" % bme680.altitude)
-  csvwriter.writerows([[bme680.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude]])
+  
   
   time.sleep(1)
 
@@ -123,7 +124,9 @@ while count < run_time:
   print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
   print("---------------------------------------")
 
-  csvwriter.writerow([aqdata["pm25 standard"]])
+  csvwriter.writerows([bme680.temperature,bme680.gas,bme680.relative_humidity,bme680.pressure,bme680.altitude,aqdata["pm25 standard"]])
+
+
     
   count += 1
     
