@@ -19,7 +19,7 @@ if len(sys.argv) < 2:
 else:
   run_time = int(sys.argv[1])
 
-file = open('pm2.5_and_weather_data_inside', 'w', newline = None)
+file = open('pm2.5_and_weather_data_outside', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
 csvwriter.writerow(["Temperature","Gas","Relative Humidity","Pressure","Altitude","PM 2.5 Standard"])
 
