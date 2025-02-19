@@ -24,7 +24,6 @@ csvwriter = csv.writer(file, delimiter=',')
 
 count=0
 while count < run_time:
-  count += 1
   print("Taking data entry:", count)
   time.sleep(1)
 
@@ -125,6 +124,8 @@ while count < run_time:
     print("---------------------------------------")
   
     csvwriter.writerow([aqdata["pm25 standard"]])
+
+    count += 1
     
   file.close()
   
