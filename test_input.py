@@ -22,7 +22,7 @@ else:
 file = open('pm2.5_and_weather_data', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
 
-count=0
+count=1
 while count < run_time:
   print("Taking data entry:", count)
   time.sleep(1)
@@ -84,48 +84,48 @@ while count < run_time:
   
   print("Found PM2.5 sensor, reading data...")
   
-  while True:
-    print("\nTemperature: %0.1f C" % bme680.temperature)
-    print("Gas: %d ohm" % bme680.gas)
-    print("Humidity: %0.1f %%" % bme680.relative_humidity)
-    print("Pressure: %0.3f hPa" % bme680.pressure)
-    print("Altitude = %0.2f meters" % bme680.altitude)
-    csvwriter.writerows([[bme680.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude]])
-    
-    time.sleep(1)
+ 
+  print("\nTemperature: %0.1f C" % bme680.temperature)
+  print("Gas: %d ohm" % bme680.gas)
+  print("Humidity: %0.1f %%" % bme680.relative_humidity)
+  print("Pressure: %0.3f hPa" % bme680.pressure)
+  print("Altitude = %0.2f meters" % bme680.altitude)
+  csvwriter.writerows([[bme680.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude]])
   
-    try:
-        aqdata = pm25.read()
-        # print(aqdata)
-    except RuntimeError:
-        print("Unable to read from sensor, retrying...")
-        continue
+  time.sleep(1)
 
-    print()
-    print("Concentration Units (standard)")
-    print("---------------------------------------")
-    print(
-        "PM 1.0: %d\tPM2.5: %d\tPM10: %d"
-        % (aqdata["pm10 standard"], aqdata["pm25 standard"], aqdata["pm100 standard"])
-    )
-    print("Concentration Units (environmental)")
-    print("---------------------------------------")
-    print(
-        "PM 1.0: %d\tPM2.5: %d\tPM10: %d"
-        % (aqdata["pm10 env"], aqdata["pm25 env"], aqdata["pm100 env"])
-    )
-    print("---------------------------------------")
-    print("Particles > 0.3um / 0.1L air:", aqdata["particles 03um"])
-    print("Particles > 0.5um / 0.1L air:", aqdata["particles 05um"])
-    print("Particles > 1.0um / 0.1L air:", aqdata["particles 10um"])
-    print("Particles > 2.5um / 0.1L air:", aqdata["particles 25um"])
-    print("Particles > 5.0um / 0.1L air:", aqdata["particles 50um"])
-    print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
-    print("---------------------------------------")
-  
-    csvwriter.writerow([aqdata["pm25 standard"]])
+  try:
+      aqdata = pm25.read()
+      # print(aqdata)
+  except RuntimeError:
+      print("Unable to read from sensor, retrying...")
+      continue
 
-    count += 1
+  print()
+  print("Concentration Units (standard)")
+  print("---------------------------------------")
+  print(
+      "PM 1.0: %d\tPM2.5: %d\tPM10: %d"
+      % (aqdata["pm10 standard"], aqdata["pm25 standard"], aqdata["pm100 standard"])
+  )
+  print("Concentration Units (environmental)")
+  print("---------------------------------------")
+  print(
+      "PM 1.0: %d\tPM2.5: %d\tPM10: %d"
+      % (aqdata["pm10 env"], aqdata["pm25 env"], aqdata["pm100 env"])
+  )
+  print("---------------------------------------")
+  print("Particles > 0.3um / 0.1L air:", aqdata["particles 03um"])
+  print("Particles > 0.5um / 0.1L air:", aqdata["particles 05um"])
+  print("Particles > 1.0um / 0.1L air:", aqdata["particles 10um"])
+  print("Particles > 2.5um / 0.1L air:", aqdata["particles 25um"])
+  print("Particles > 5.0um / 0.1L air:", aqdata["particles 50um"])
+  print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
+  print("---------------------------------------")
+
+  csvwriter.writerow([aqdata["pm25 standard"]])
     
-  file.close()
+  count += 1
+    
+file.close()
   
