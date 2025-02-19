@@ -124,7 +124,7 @@ while count < run_time:
   print("Particles > 10 um / 0.1L air:", aqdata["particles 100um"])
   print("---------------------------------------")
 
-  csvwriter.writerows([bme680.temperature,bme680.gas,bme680.relative_humidity,bme680.pressure,bme680.altitude,
+  csvwriter.writerow([bme680.temperature,bme680.gas,bme680.relative_humidity,bme680.pressure,bme680.altitude,
                        aqdata["pm25 standard"]])
 
 
