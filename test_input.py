@@ -21,7 +21,7 @@ else:
 
 file = open('pm2.5_and_weather_data', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
-csvwriter.writerow(["
+csvwriter.writerow(["Temperature","Gas","Relative Humidity","Pressure","Altitude","PM 2.5 Standard"])
 
 count=1
 while count < run_time:
