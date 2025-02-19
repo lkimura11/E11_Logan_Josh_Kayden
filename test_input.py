@@ -38,7 +38,7 @@ while True:
   print("Altitude = %0.2f meters" % bme680.altitude)
   csvwriter.writerows([bme.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude])
   
-    time.sleep(2)
+  time.sleep(2)
 
 
 ## PM 2.5
