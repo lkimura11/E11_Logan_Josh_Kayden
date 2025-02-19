@@ -36,7 +36,7 @@ while True:
   print("Humidity: %0.1f %%" % bme680.relative_humidity)
   print("Pressure: %0.3f hPa" % bme680.pressure)
   print("Altitude = %0.2f meters" % bme680.altitude)
-  csvwriter.writerows([bme.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude])
+  csvwriter.writerows([bme680.temperature],[bme680.gas],[bme680.relative_humidity],[bme680.pressure],[bme680.altitude])
   
   time.sleep(2)
 
