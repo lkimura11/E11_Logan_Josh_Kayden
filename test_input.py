@@ -11,6 +11,8 @@ from adafruit_pm25.uart import PM25_UART
 import adafruit_bme680
 import board
 
+
+
 ## Argument
 if len(sys.argv) < 2:
   print("This script requires an input argument specifying the run time in seconds")
@@ -19,9 +21,11 @@ if len(sys.argv) < 2:
 else:
   run_time = int(sys.argv[1])
 
-file = open('pm2.5_and_weather_data_outside', 'w', newline = None)
+file = open('other_location', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
 csvwriter.writerow(["Temperature","Gas","Relative Humidity","Pressure","Altitude","PM 2.5 Standard"])
+
+time.sleep(60)
 
 count=1
 while count < run_time:
@@ -91,9 +95,7 @@ while count < run_time:
   print("Humidity: %0.1f %%" % bme680.relative_humidity)
   print("Pressure: %0.3f hPa" % bme680.pressure)
   print("Altitude = %0.2f meters" % bme680.altitude)
-  
-  
-  time.sleep(1)
+
 
   try:
       aqdata = pm25.read()
