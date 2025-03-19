@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 from datetime import datetime
 
-PIN_NUM = 11
+PIN_NUM = 17
 count = 0
 log_file = "radiation_count.txt"
 
@@ -19,7 +19,7 @@ def count_num(channel):
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PIN_NUM, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.add_event_detect(PIN_NUM, GPIO.FALLING, callback=count_num, bouncetime=200)
+GPIO.add_event_detect(PIN_NUM, GPIO.FALLING, callback=count_num, bouncetime=20)
 
 try: 
      while True:
