@@ -19,7 +19,7 @@ def count_num(channel):
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PIN_NUM, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.add_event_detect(PIN_NUM, GPIO.FALLING, callback=count_num, bouncetime=20)
+GPIO.add_event_detect(PIN_NUM, GPIO.FALLING, callback=count_num, bouncetime=500)
 
 try: 
      while True:
