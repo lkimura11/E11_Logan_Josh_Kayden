@@ -1,0 +1,57 @@
+2025-04-02 15:02:34.418198 - Pulse detected
+2025-04-02 15:02:36.407206 - Pulse detected
+2025-04-02 15:02:38.594806 - Pulse detected
+2025-04-02 15:02:38.850380 - Pulse detected
+2025-04-02 15:02:40.625071 - Pulse detected
+2025-04-02 15:02:40.920887 - Counts in the last ten seconds: 5
+2025-04-02 15:02:41.062558 - Pulse detected
+2025-04-02 15:02:41.269030 - Pulse detected
+2025-04-02 15:02:41.740109 - Pulse detected
+2025-04-02 15:02:41.977096 - Pulse detected
+2025-04-02 15:02:43.985702 - Pulse detected
+2025-04-02 15:02:44.056437 - Pulse detected
+2025-04-02 15:02:45.209045 - Pulse detected
+2025-04-02 15:02:45.394237 - Pulse detected
+2025-04-02 15:02:50.931429 - Counts in the last ten seconds: 8
+2025-04-02 15:02:52.572930 - Pulse detected
+2025-04-02 15:03:00.794392 - Pulse detected
+2025-04-02 15:03:00.938378 - Counts in the last ten seconds: 2
+2025-04-02 15:03:02.601712 - Pulse detected
+2025-04-02 15:03:05.495049 - Pulse detected
+2025-04-02 15:03:05.768397 - Pulse detected
+2025-04-02 15:03:09.880217 - Pulse detected
+2025-04-02 15:03:10.948877 - Counts in the last ten seconds: 4
+2025-04-02 15:03:20.959584 - Counts in the last ten seconds: 0
+2025-04-02 15:03:21.518102 - Pulse detected
+2025-04-02 15:03:24.393016 - Pulse detected
+2025-04-02 15:03:24.927057 - Pulse detected
+2025-04-02 15:03:30.970292 - Counts in the last ten seconds: 3
+2025-04-02 15:03:34.499851 - Pulse detected
+2025-04-02 15:03:39.058017 - Pulse detected
+2025-04-02 15:03:40.118880 - Pulse detected
+2025-04-02 15:03:40.980728 - Counts in the last ten seconds: 3
+2025-04-02 15:03:43.420844 - Pulse detected
+2025-04-02 15:03:43.691555 - Pulse detected
+2025-04-02 15:03:46.332926 - Pulse detected
+2025-04-02 15:03:47.058441 - Pulse detected
+2025-04-02 15:03:47.262080 - Pulse detected
+2025-04-02 15:03:49.104124 - Pulse detected
+2025-04-02 15:03:50.991140 - Counts in the last ten seconds: 6
+2025-04-02 15:04:00.666083 - Pulse detected
+2025-04-02 15:04:01.001559 - Counts in the last ten seconds: 1
+2025-04-02 15:04:02.800765 - Pulse detected
+2025-04-02 15:04:05.122688 - Pulse detected
+2025-04-02 15:04:06.944772 - Pulse detected
+2025-04-02 15:04:08.933180 - Pulse detected
+2025-04-02 15:04:09.733920 - Pulse detected
+2025-04-02 15:04:11.012017 - Counts in the last ten seconds: 5
+2025-04-02 15:04:12.079921 - Pulse detected
+2025-04-02 15:04:16.490427 - Pulse detected
+2025-04-02 15:04:18.152804 - Pulse detected
+2025-04-02 15:04:21.022545 - Counts in the last ten seconds: 3
+2025-04-02 15:04:22.641845 - Pulse detected
+2025-04-02 15:04:31.030381 - Counts in the last ten seconds: 1
+2025-04-02 15:04:37.522625 - Pulse detected
+2025-04-02 15:04:38.238790 - Pulse detected
+2025-04-02 15:04:40.072702 - Pulse detected
+2025-04-02 15:04:41.040813 - Counts in the last ten seconds: 3
