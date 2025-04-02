@@ -4,7 +4,7 @@ from datetime import datetime
 
 PIN_NUM = 17
 count = 0
-log_file = "radiation_count_in.txt"
+log_file = "rock_count.txt"
 
 def log_event(event):
     with open(log_file, "a") as f:
