@@ -23,9 +23,9 @@ GPIO.add_event_detect(PIN_NUM, GPIO.FALLING, callback=count_num)
 
 try: 
      while True:
-        time.sleep(60) 
-        print(f"Counts in the last minute were: {count}")
-        log_event(f"{datetime.now()} - Counts in the last minute: {count}")
+        time.sleep(10) 
+        print(f"Counts in the last ten seconds were: {count}")
+        log_event(f"{datetime.now()} - Counts in the last ten seconds: {count}")
         count = 0 #reset
 
   
