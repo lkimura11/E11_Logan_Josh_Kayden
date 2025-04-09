@@ -17,7 +17,7 @@ import board
 if len(sys.argv) < 2:
   print("This script requires an input argument specifying the run time in seconds")
   exit()
-  #run_time = 10
+  run_time = 10
 else:
   run_time = int(sys.argv[1])
 
@@ -25,7 +25,7 @@ file = open('other_location', 'w', newline = None)
 csvwriter = csv.writer(file, delimiter=',')
 csvwriter.writerow(["Temperature","Gas","Relative Humidity","Pressure","Altitude","PM 2.5 Standard"])
 
-time.sleep(60)
+time.sleep(2)
 
 count=1
 while count < run_time:
